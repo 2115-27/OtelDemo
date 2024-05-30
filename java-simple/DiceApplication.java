@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Bean;
 
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdk;
-
+OpenTelemetrySdk sdk = AutoConfiguredOpenTelemetrySdk.initialize()
+    .getOpenTelemetrySdk();
 @SpringBootApplication
 public class DiceApplication {
   public static void main(String[] args) {
